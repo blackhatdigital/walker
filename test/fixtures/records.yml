@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comments: MyText
+  distance: 9.99
+  rating: MyString
+  date: 2016-04-20
+
+two:
+  comments: MyText
+  distance: 9.99
+  rating: MyString
+  date: 2016-04-20
