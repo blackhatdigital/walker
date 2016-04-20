@@ -25,6 +25,8 @@ class RecordsController < ApplicationController
   # POST /records.json
   def create
     @record = Record.new(record_params)
+    @record.user_id = current_user.id
+
 
     respond_to do |format|
       if @record.save
