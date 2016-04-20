@@ -1,8 +1,15 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:logbook, :new, :create, :edit, :update, :destroy ]
+
 
   # GET /records
   # GET /records.json
+
+  def logbook
+   @records = Record.where(user_id: current_user).order("created_at DESC")
+  end
+
   def index
     @records = Record.all
   end

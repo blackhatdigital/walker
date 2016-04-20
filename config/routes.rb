@@ -2,10 +2,9 @@ Rails.application.routes.draw do
   resources :records
   devise_for :users
   get 'pages/home'
-
   get 'pages/terms'
-
   get 'pages/privacy'
+  get 'logbook' => 'records#logbook'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
