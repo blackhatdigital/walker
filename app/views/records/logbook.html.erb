@@ -1,6 +1,8 @@
 <h1>My Log Book</h1>
 
 <%= image_tag current_user.avatar.url(:medium) %>
+I have walked <%=  @distance %>km total
+
 
 <%= render 'form'  %> 
 
@@ -10,6 +12,10 @@
       <li><%= record.comments %></li>
       <li><%= record.distance %></li>
       <li><%= record.rating %></li>
+
+      <li><%= record.distance %></li>
+
+
     </ul>
   </div>
 <% end %>

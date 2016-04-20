@@ -9,6 +9,7 @@ class RecordsController < ApplicationController
   def logbook
    @records = Record.where(user_id: current_user).order("created_at DESC")
    @record = Record.new
+   @distance = Record.sum(:distance)
 
   end
 
@@ -39,7 +40,7 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.save
-        format.html { redirect_to @record, notice: 'Record was successfully created.' }
+        format.html { redirect_to logbook_path, notice: 'Record was successfully created.' }
         format.json { render :show, status: :created, location: @record }
       else
         format.html { render :new }
