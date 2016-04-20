@@ -1,0 +1,28 @@
+<% if current_page?(root_url) %>
+  <div class="row">
+    <div class="col-md-12 home_header">
+    </div>
+  </div>
+<% elsif %>
+  <div class="row">
+    <div class="col-md-12 inner_header">
+      <div class="container">
+        <div class="col-md-3 col-sm-12">
+          <%= image_tag current_user.avatar.url(:medium) %>
+        </div>
+        <div class="col-md-9 col-sm-12">
+          <div class="log_name">Josh Edgar</div>
+          <div class="log_calc">
+            <div class="log_sml">I have now walked approximately</div>
+            <div class="log_lrg"><%= @distance %>km</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="row">
+    <div class="col-md-12 inner_header">
+    </div>
+  </div>
+<% end %>

@@ -9,7 +9,7 @@ class RecordsController < ApplicationController
   def logbook
    @records = Record.where(user_id: current_user).order("created_at DESC")
    @record = Record.new
-   @distance = Record.sum(:distance)
+   @distance = Record.where(user_id: current_user).sum(:distance)
 
   end
 
@@ -68,7 +68,7 @@ class RecordsController < ApplicationController
   def destroy
     @record.destroy
     respond_to do |format|
-      format.html { redirect_to records_url, notice: 'Record was successfully destroyed.' }
+      format.html { redirect_to logbook_path, notice: 'Record was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

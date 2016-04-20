@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #custom gems
 gem 'devise'
 gem "paperclip", "~> 5.0.0.beta1"
+gem 'bootstrap-sass', '~> 3.3.6'
 
 group :development, :test do
   gem 'byebug'
