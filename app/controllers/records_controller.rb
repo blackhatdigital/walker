@@ -8,6 +8,8 @@ class RecordsController < ApplicationController
 
   def logbook
    @records = Record.where(user_id: current_user).order("created_at DESC")
+   @record = Record.new
+
   end
 
   def index
