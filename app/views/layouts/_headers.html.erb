@@ -3,11 +3,12 @@
     <div class="col-md-12 home_header">
     </div>
   </div>
-<% elsif %>
+<% end %>
+<% if current_page?('/logbook') %>
   <div class="row">
     <div class="col-md-12 inner_header">
       <div class="container">
-        <div class="col-md-3 col-sm-12">
+        <div class="col-md-3 col-sm-12 log_profile_image">
           <%= image_tag current_user.avatar.url(:medium) %>
         </div>
         <div class="col-md-9 col-sm-12">
@@ -18,11 +19,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-<% else %>
-  <div class="row">
-    <div class="col-md-12 inner_header">
     </div>
   </div>
 <% end %>
