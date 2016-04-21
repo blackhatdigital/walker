@@ -81,6 +81,6 @@ class RecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def record_params
-      params.require(:record).permit(:comments, :distance, :rating, :date)
+      params.require(:record).permit(:comments, :distance, :challenge, :title)
     end
 end

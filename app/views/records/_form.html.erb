@@ -13,21 +13,19 @@
     <% end %>
 
     <div class="field form-group">
-      <%= f.text_area :comments, class: 'form-control', placeholder: 'comments' %>
+      <%= f.text_field :title, class: 'form-control', placeholder: 'Give your record a title' %><br />
+      <%= f.text_area :comments, class: 'form-control', placeholder: 'Tell us about your walk' %>
     </div>
     <div class="form-group">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="input-group">  
-           <%= f.text_field :distance, class: 'form-control', placeholder: 'distance' %>
+           <%= f.text_field :distance, class: 'form-control', placeholder: 'How far was it? eg: 10' %>
            <div class="input-group-addon">km</div>
           </div>
         </div>
-        <div class="col-md-4">
-        <%= f.text_field :rating, class: 'form-control', placeholder: 'rating' %>
-        </div>
-        <div class="col-md-4">
-        <%= f.text_field :date, :class => 'datepicker form-control', placeholder: 'date completed' %>
+        <div class="col-md-6">
+        <%= f.select :challenge, class: 'form-control', placeholder: 'How would you rate the challenge' %>
         </div>
       </div>
     </div>
