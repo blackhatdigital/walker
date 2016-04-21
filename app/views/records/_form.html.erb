@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="col-md-6">
-        <%= f.select :challenge, class: 'form-control', placeholder: 'How would you rate the challenge' %>
+        <%= f.select :challenge, options_for_select(["Very easy", "Easy", "On the harder side", "Hard", "Very Hard"]), {include_blank: 'Difficulty Level'}, {required: 'true', class: 'form-control'} %>
         </div>
       </div>
     </div>
